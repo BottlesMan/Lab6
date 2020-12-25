@@ -16,3 +16,37 @@ Fahsai: Next Monday....that is OK!!! I'm looking forward to watching Star Wars V
 Luke Skywalker: May the Force be with you krub
 Fahsai: 555+ see you Next Monday. Bye Bye \(^ ^)/
 */
+
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+    string Name;
+    cout << "Fahsai: Sawadee ka...Can you tell me your name?\n";
+    cout << "?????: ";
+    getline(cin,Name);
+    cout << "Fahsai: Wow!!! " << Name << " is a really cool name.\n";
+    cout << "Fahsai: I think you are an Engineering student. What is your student ID?\n";
+    int stdID;
+    cout << Name << ": ";
+    cin >> stdID;
+    int Gear = stdID/10000000;
+    int Result = Gear-12;
+    cin.ignore();
+    cout << "Fahsai: I think you may be GEAR " << Result << ". I have a free movie ticket for you.\n";
+    cout << "Fahsai: Let's go to the cinema together!!!\n";
+    cout << "Fahsai: What movie do you want to watch?\n";
+    cout << Name << ": ";
+    string Movie;
+    getline(cin,Movie);
+    cout << "Fahsai: So....which day are you free to go with me?\n";
+    string Day;
+    cout << Name << ": ";
+    getline(cin,Day);
+    cout << "Fahsai: " << Day << "....that is OK!!! I'm looking forward to watching " << Movie << " with you.\n";
+    cout << Name << ": ";
+    string Answer;
+    getline(cin,Answer);
+    cout << "Fahsai: 555+ see you " << Day << ". Bye Bye \\(^ ^)/\n";
+    return 0;
+}
